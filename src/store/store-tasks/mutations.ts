@@ -14,6 +14,12 @@ const mutation: MutationTree<ExampleStateInterface> = {
   addTask(state: any, payload: any): void {
     console.log(payload.task);
     Vue.set(state.tasks, payload.id, payload.task);
+  },
+  setSearch(state: any, value: string): void {
+    state.search = value;
+  },
+  setSort(state: any, value: any): void {
+    state.sort = value;
   }
 };
 

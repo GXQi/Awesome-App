@@ -113,18 +113,22 @@ module.exports = configure(function(/* ctx */) {
         "QDate",
         "QTime",
         "QPopupProxy",
-        "QForm"
+        "QForm",
+        "QBanner",
+        "QSelect",
+        "QScrollArea",
+        "QToggle"
       ],
 
-      directives: ["Ripple", "ClosePopup"],
+      directives: ["Ripple", "ClosePopup", "TouchHold"],
 
       // Quasar plugins
-      plugins: ["Dialog"]
+      plugins: ["Dialog", "LocalStorage"]
     },
 
     // animations: 'all', // --- includes all animations
     // https://quasar.dev/options/animations
-    animations: [],
+    animations: ["zoomIn", "zoomOut"],
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {

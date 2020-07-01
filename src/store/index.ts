@@ -1,6 +1,7 @@
 import { store } from "quasar/wrappers";
 import Vuex from "vuex";
 import tasks from "./store-tasks/index";
+import settings from "./store-settings/index";
 
 // import example from './module-example';
 // import { ExampleStateInterface } from './module-example/state';
@@ -23,7 +24,8 @@ export default store(function({ Vue }) {
   const Store = new Vuex.Store<StoreInterface>({
     modules: {
       // example
-      tasks
+      tasks,
+      settings
     },
 
     // enable strict mode (adds overhead!)

@@ -17,8 +17,14 @@ const actions: ActionTree<ExampleStateInterface, StoreInterface> = {
       id: taskId,
       task: task
     };
-    console.log(payload);
+    // console.log(payload);
     commit("addTask", payload);
+  },
+  setSearch({ commit }, value) {
+    commit("setSearch", value);
+  },
+  setSort({ commit }, value) {
+    commit("setSort", value);
   }
 };
 
