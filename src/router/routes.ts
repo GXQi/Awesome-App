@@ -6,7 +6,12 @@ const routes: RouteConfig[] = [
     component: () => import("layouts/Layout.vue"),
     children: [
       { path: "", component: () => import("pages/PageTodo.vue") },
-      { path: "/settings", component: () => import("pages/PageSettings.vue") }
+      {
+        path: "/settings",
+        component: () => import("pages/PageSettings.vue")
+        // children: [{ path: "help", component: () => import("pages/Help.vue") }]
+      },
+      { path: "/settings/help", component: () => import("pages/Help.vue") }
     ]
   }
 ];

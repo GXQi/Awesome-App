@@ -14,6 +14,12 @@ const actions: ActionTree<ExampleStateInterface, StoreInterface> = {
   },
   saveSettings({ state }) {
     LocalStorage.set("settings", state.settings);
+  },
+  getSettings({ commit }) {
+    let settings = LocalStorage.getItem("settings");
+    if (settings) {
+      commit("setSettings", settings);
+    }
   }
 };
 

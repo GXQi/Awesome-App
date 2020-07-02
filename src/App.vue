@@ -5,7 +5,15 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'App'
-}
+import Vue from "vue";
+import { mapActions } from "vuex";
+export default Vue.extend({
+  name: "App",
+  methods: {
+    ...mapActions("settings", ["getSettings"])
+  },
+  mounted() {
+    this.getSettings();
+  }
+});
 </script>
